@@ -329,7 +329,7 @@
       line-height: 1.7;
     }
 
-    /* PROJECTS – Coming soon */
+    /* PROJECTS */
     .projects{
       max-width: 720px;
       margin: 0 auto;
@@ -350,6 +350,81 @@
       max-width: 520px;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    .project-list{
+      margin-top: 32px;
+      display: grid;
+      gap: 18px;
+      text-align: left;
+    }
+
+    .project-card{
+      padding: 18px 20px;
+      border-radius: 16px;
+      border: 1px solid rgba(148,163,184,.45);
+      background:
+        radial-gradient(160% 220% at 0% 0%, rgba(148,163,184,.18), rgba(15,23,42,1));
+      transition:
+        transform .16s ease,
+        box-shadow .16s ease,
+        border-color .16s ease,
+        background .16s ease;
+    }
+
+    .project-card:hover{
+      transform: translateY(-4px);
+      box-shadow: 0 22px 40px rgba(0,0,0,.80);
+      border-color: rgba(248,250,252,.85);
+      background:
+        radial-gradient(160% 220% at 0% 0%, rgba(248,250,252,.20), rgba(15,23,42,1));
+    }
+
+    .project-card__title{
+      margin: 0 0 4px;
+      font-size: 1.02rem;
+    }
+
+    .project-card__title a{
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .project-card__title a:hover{
+      text-decoration: underline;
+    }
+
+    .project-card__meta{
+      margin: 0 0 8px;
+      font-size: 0.78rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: rgba(148,163,184,.95);
+    }
+
+    .project-card__desc{
+      margin: 0 0 12px;
+      color: rgba(226,232,240,.86);
+      font-size: 0.94rem;
+      line-height: 1.7;
+    }
+
+    .project-card__link{
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      color: rgba(248,250,252,.9);
+      text-decoration: none;
+    }
+
+    .project-card__link::after{
+      content: "↗";
+      margin-left: 6px;
+      font-size: 0.8em;
+    }
+
+    .project-card__link:hover{
+      text-decoration: underline;
     }
 
     /* SKILLS */
@@ -715,11 +790,46 @@
 
     <section id="projects" class="projects">
       <p class="about__kicker">Projects</p>
-      <h2 class="projects__title">Coming soon</h2>
+      <h2 class="projects__title">Projects</h2>
       <p class="projects__sub">
-        I’m currently working on personal and client projects.  
-        Detailed case studies will appear here soon.
+        A few things I’ve built and worked on recently.
       </p>
+
+      <div class="project-list">
+        <!-- Project 1 -->
+        <article class="project-card">
+          <h3 class="project-card__title">
+            <a href="https://ravirk1347-arch.github.io/portfolio-ravi-/" target="_blank" rel="noreferrer">
+              Portfolio – Ravi
+            </a>
+          </h3>
+          <p class="project-card__meta">Modern Portfolio Website</p>
+          <p class="project-card__desc">
+            A clean, responsive portfolio site with a focus on bold typography, simple layout,
+            and smooth scrolling. Built to showcase work and personal brand.
+          </p>
+          <a class="project-card__link" href="https://ravirk1347-arch.github.io/portfolio-ravi-/" target="_blank" rel="noreferrer">
+            View live
+          </a>
+        </article>
+
+        <!-- Copy this block for more projects:
+        <article class="project-card">
+          <h3 class="project-card__title">
+            <a href="https://your-project-link" target="_blank" rel="noreferrer">
+              Project Title
+            </a>
+          </h3>
+          <p class="project-card__meta">Project Type</p>
+          <p class="project-card__desc">
+            Short description of what this project is, what you used, and what you focused on.
+          </p>
+          <a class="project-card__link" href="https://your-project-link" target="_blank" rel="noreferrer">
+            View live
+          </a>
+        </article>
+        -->
+      </div>
     </section>
 
     <section id="skills" class="skills-graph">
